@@ -1,8 +1,12 @@
 def main():
-    with open("books/frankenstein.txt") as f:
-        lines = f.readlines()
-        for line in lines:
-            print(f"{line}")
+    book_path = "books/frankenstein.txt"
+    text = get_book_text(book_path)
+    print(text)
 
-if __name__ == "__main__":
-    main()
+
+def get_book_text(path):
+    with open(path) as f:
+        return f.read()
+
+
+main()
